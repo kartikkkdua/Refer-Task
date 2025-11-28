@@ -2,7 +2,7 @@
 
 A modern, full-stack referral rewards platform built for businesses with advanced user management, analytics, and admin capabilities.
 
-## 🚀 Features
+##  Features
 
 ### User Features
 - **Authentication System**: Secure login and registration with bcrypt password hashing
@@ -53,43 +53,14 @@ A modern, full-stack referral rewards platform built for businesses with advance
 - Component-based architecture
 - LocalStorage for session persistence
 
-## 📦 Installation
+##  Installation
 
 ### Prerequisites
 - Node.js (v14+)
 - MongoDB (local or Atlas)
 
-### Backend Setup
-```bash
-cd backend
-npm install
 
-# Create .env file
-echo "MONGO_URI=your_mongodb_connection_string" > .env
-echo "PORT=5001" >> .env
-
-# Seed initial configuration
-node seed.js
-
-# Start server
-npm start
-# or for development
-npm run dev
-```
-
-### Frontend Setup
-```bash
-cd frontend
-npm install
-
-# Optional: Create .env for custom API URL
-echo "REACT_APP_API_BASE=http://localhost:5001/api" > .env
-
-# Start development server
-npm start
-```
-
-## 🎯 Usage
+##  Usage
 
 ### For Users
 1. **Register**: Create account with name, email, password (optional: company, phone)
@@ -105,7 +76,7 @@ npm start
 3. **Manage Users**: Change user status, view details
 4. **Track Performance**: See top earners and recent activity
 
-## 🎨 Design Features
+##  Design Features
 
 - **Glassmorphism UI**: Modern frosted glass effect with backdrop blur
 - **Gradient Backgrounds**: Animated purple-pink gradient
@@ -115,7 +86,7 @@ npm start
 - **Color-Coded Status**: Visual indicators for user status
 - **Interactive Elements**: Hover states, loading indicators
 
-## 📊 Database Models
+##  Database Models
 
 ### User Model
 ```javascript
@@ -143,7 +114,7 @@ npm start
 }
 ```
 
-## 🔐 Security Features
+##  Security Features
 
 - Password hashing with bcrypt (10 rounds)
 - Account status validation on login
@@ -151,7 +122,7 @@ npm start
 - Self-referral prevention
 - Input validation on all endpoints
 
-## 🚀 API Endpoints
+##  API Endpoints
 
 ### Authentication
 - `POST /api/register` - Create new account
@@ -175,39 +146,9 @@ npm start
 - `PUT /api/admin/users/:userId/status` - Update user status
 - `GET /api/admin/dashboard` - Get admin dashboard stats
 
-## 🎁 Reward System
+##  Reward System
 
 - Default reward: **50 coins** per referral (configurable)
 - Both users receive coins when code is applied
 - Tracks total earnings separately from current balance
 - Transaction history for transparency
-
-## 📱 Screenshots
-
-The app features:
-- Modern gradient login/register screens
-- Stats dashboard with 4 key metrics
-- Referral code display with copy button
-- Transaction history timeline
-- User profile with avatar support
-- Admin panel with user management
-- Responsive leaderboard
-
-## 🔧 Configuration
-
-Edit `backend/seed.js` to change reward amount:
-```javascript
-await Config.updateOne(
-  { key: "referralReward" },
-  { value: 50 }, // Change this value
-  { upsert: true }
-);
-```
-
-## 📝 License
-
-ISC
-
-## 👥 Contributing
-
-This is a business referral management system. For enterprise features or customization, please contact the development team.
